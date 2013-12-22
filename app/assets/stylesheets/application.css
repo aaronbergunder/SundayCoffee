@@ -1,0 +1,97 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:900,400italic,900italic|Noto+Serif:400,400italic|Montserrat:400,700);
+
+h1.playfair {
+	font-family: 'Playfair Display', 'Montserrat', sans-serif;
+	font-weight: 900;
+	font-style: italic;
+	font-size: 9em;
+	letter-spacing: -0.03em;
+	line-height: 0.9em;
+	text-align: left;
+	color: #fff;
+}
+
+.underdate {
+	margin-top: -0.5em;
+	padding-bottom: 3em;
+	color: #444;
+}
+
+h3.montserrat {
+	margin-bottom: 1em;
+	font-family: 'Montserrat', 'Futura', 'Gotham' sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+th {
+	color: #333;
+}
+
+.question, .answer {
+	margin-bottom: 1em;
+	font-family: 'Montserrat', 'Futura', 'Gotham' sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.answer {
+	padding-left: 1em;
+}
+
+.actions {
+	margin-bottom: 1em;
+}
+
+img.thumbs {
+	border-radius: 54px;
+	border: 4px solid #fff;
+	margin: 5px;
+	text-align: right;
+}
+
+.sage {
+	color: #63C296;
+}
+
+.chinatown {
+	color: #F33B38
+}
+
+div.thumbs {
+}
+
+div.name, div.edited {
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: -0.3;
+	text-align: left;
+	padding-top: 20px;
+}
+
+img.edit {
+	width: 32px;
+}
+
+div.add-person {
+	position: fixed;
+	right: 15px;
+	top: 15px;
+}
+
