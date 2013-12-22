@@ -32,6 +32,8 @@ gem 'devise'
 
 gem 'thin'
 
+gem 'rake'
+
 gem 'carrierwave'
 
 gem 'rmagick'
