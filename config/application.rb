@@ -6,14 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-config.assets.precompile += [
-      'bootstrap.min.js'
-      'application.js'
-      'pencil.png'
-      'flat-ui.css'
-      'bootstrap.css'
-      'scaffolds.css.scss'
-    ]
+
 
 module SundayCoffee
   class Application < Rails::Application

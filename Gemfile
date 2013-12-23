@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+group :development do
+  gem 'sqlite3'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -45,6 +47,7 @@ end
 
 group :production do
 	gem 'rails_12factor'
+  gem 'pg'
 end
 
 # Use ActiveModel has_secure_password
