@@ -8,8 +8,6 @@ SundayCoffee::Application.routes.draw do
   # root 'welcome#index'
     root 'people#index'
 
-    post 'people/:id/edit' => 'people#index'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

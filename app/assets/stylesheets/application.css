@@ -42,9 +42,12 @@ div.name, div.edited {
 }
 
 img.edit {
-	width: 32px;
+	width: 16px;
 }
 
+img.add {
+	width: 32px;
+}
 
 
 input#person_avatar {
@@ -64,6 +67,10 @@ input#person_avatar {
 
 .flat-red {
 	color: #E74C3C;
+}
+
+.flat-purple {
+	color :#9B59B6;
 }
 
 .flat-green {

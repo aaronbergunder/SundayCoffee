@@ -1,3 +1,8 @@
+<% if notice %>
+<div id="alert" class="alert alert-info">
+  <%= notice %></div>
+<% end %>
+
 <div class="col-sm-12">
   <h1 class="helvetica">Coffee Sunday?</h1>
   <h6 class="helvetica underdate"><% @sunday = Date.new %>
@@ -28,5 +33,5 @@
 <% end %>
 
 <br>
-<div class="add-person helvetica"><%= link_to (image_tag '/images/add.png', :alt=>"Add a new friend!", :class => 'edit'), new_person_path %>Add a guest</div>
+<div class="add-person helvetica"><%= link_to (image_tag '/images/add.png', :alt=>"Add a new friend!", :class => 'add'), new_person_path %>Add a guest</div>
 
