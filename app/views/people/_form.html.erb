@@ -11,23 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field question">
+  <div class="">
     Hey, <%= @person.name + '!' %><br>
     You going to be at coffee this week?
   </div>
-  <div class="field answer">
-    <%= f.label "Avatar" %>
-    <%= f.file_field :avatar %>
-  </div>
-  <div class="field answer">
-    <%= f.radio_button :attending , "1" , :checked => true %> Wouldn't miss it!<br>
-    <%= f.radio_button :attending , "0" %> Sadly, no.
-  </div>
-  <div class="field">
-    Got a reason?
-    <%= f.text_field :comment %>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="tile">
+        <%= f.label "Avatar" %><br>
+        <% if @person.avatar %>
+          <%= image_tag @person.avatar_url(:thumb), :class => "thumbs" %>
+        <% end %>
+        <br>
+        <%= f.file_field :avatar %>
+      </div>
     </div>
+    <div class="col-sm-4">
+      <div class="tile">
+        <%= f.radio_button :attending , "1" , :checked => true %> Wouldn't miss it!<br>
+        <%= f.radio_button :attending , "0" %> Sadly, no.
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="tile">
+        Got a reason?
+        <%= f.text_field :comment %>
+      </div>
+    </div>
+  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit", :class => "btn btn-primary" %>
   </div>
 <% end %>
