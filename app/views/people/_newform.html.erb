@@ -21,19 +21,20 @@
   <div class="col-sm-3">
     <div class="tile">
       <%= f.label "Avatar" %>
-      <%= f.file_field :avatar, accept: 'image/png,image/gif,image/jpeg', :class => "btn btn-primary" %>
+      <%= f.file_field :avatar, accept: 'image/png,image/gif,image/jpeg' %>
     </div>
   </div>
   <div class="col-sm-3">
     <div class="tile">
+      <%= f.label "Attending" %>
       <%= f.radio_button :attending , "1" , :class => "radio" %> Wouldn't miss it!<br>
       <%= f.radio_button :attending , "0", :class => "radio" %> Sadly, no.
     </div>
   </div>
   <div class="col-sm-3">
     <div class="tile">
-      Got a reason?
-      <%= f.text_field :comment %>
+      <%= f.label "Reason" %>
+      <%= f.text_field :comment, :class => "form-control" %>
       </div>
   </div>
 </div>

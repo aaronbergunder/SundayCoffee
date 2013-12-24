@@ -1,62 +1,32 @@
 <div class="col-sm-12">
-  <h1 class="turquoise">Coffee Sunday?</h1>
-  <h5 class="emerald"><% @sunday = Date.new %>
+  <h1 class="helvetica">Coffee Sunday?</h1>
+  <h6 class="helvetica underdate"><% @sunday = Date.new %>
   <% @sunday = Time.now.end_of_week %>
-  <%= @sunday.strftime("%B %d, %Y") %></h5>
+  <%= @sunday.strftime("%B %d, %Y") %></h6>
+
 </div>
 
 <div class="col-sm-12">
-  <h6 class="">Gonna be there</h6>
+  <h6 class="flat-green">Gonna be there</h6>
 </div>
 
 <% @people.each do |person| %>
   <% if person.attending? %> 
-    <div class="row">
-      <div class="col-sm-2 thumbs">
-        <%= image_tag person.avatar_url(:thumb), :class => "thumbs" %>
-      </div>
-      <div class="col-sm-2 name">
-        <%= person.name %>
-      </div>
-      
-      <div class="col-sm-8">
-        <%= link_to (image_tag '/images/pencil.png', :class => "edit"), edit_person_path(person) %>
-        <div class="tooltip fade bottom in">
-          <div class="tooltip-inner"><%= person.comment %></div>
-        </div>
-      </div>
-      
-    </div>
+    <%= render 'list' , :person => person %>
   <% end %>
 <% end %>
 
 
 <div class="col-sm-12">
-  <h6 class="">Not gonna make it</h6>
+  <h6 class="flat-red">Not gonna be there</h6>
 </div>
 
 <% @people.each do |person| %>
   <% if !person.attending? %> 
-    <div class="row">
-      <div class="col-sm-3 thumbs">
-        <%= image_tag person.avatar_url(:thumb), :class => "thumbs" %>
-      </div>
-      <div class="col-sm-2 name">
-        <%= person.name %>
-      </div>
-      
-      <div class="col-sm-3 small">
-        <%= link_to (image_tag '/images/pencil.png', :class => "edit"), edit_person_path(person) %>
-        <div class="tooltip fade bottom in">
-          <div class="tooltip-inner"><%= person.comment %></div>
-        </div>
-      </div>
-    </div>
+    <%= render 'list' , :person => person %>
   <% end %>
 <% end %>
 
-
-
 <br>
+<div class="add-person helvetica"><%= link_to (image_tag '/images/add.png', :alt=>"Add a new friend!", :class => 'edit'), new_person_path %>Add a guest</div>
 
-<div class="add-person"><%= link_to (image_tag '/images/add.png', :alt=>"Add a new friend!", :class => 'edit'), new_person_path %></div>

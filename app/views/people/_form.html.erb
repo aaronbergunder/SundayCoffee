@@ -10,13 +10,20 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="">
-    Hey, <%= @person.name + '!' %><br>
-    You going to be at coffee this week?
-  </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
+      <% if @person.name %>
+        <h4>Hey, <%= @person.name + '!' %></h4>
+      <% else %>
+        <div class="tile">
+        Name<br>
+          <%= f.text_field :name, :class => "form-control" %><br>
+          You going to be at coffee this week?
+        </div>
+      <% end %>
+    </div>
+  
+    <div class="col-sm-3">
       <div class="tile">
         <%= f.label "Avatar" %><br>
         <% if @person.avatar %>
@@ -26,16 +33,17 @@
         <%= f.file_field :avatar, accept: 'image/png,image/gif,image/jpeg' %>
       </div>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="tile">
-        <%= f.radio_button :attending , "1" , :checked => true %> Wouldn't miss it!<br>
+        <%= f.label "Attending" %><br>
+        <%= f.radio_button :attending , "1" %> Wouldn't miss it!<br>
         <%= f.radio_button :attending , "0" %> Sadly, no.
       </div>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="tile">
-        Got a reason?
-        <%= f.text_field :comment %>
+        <%= f.label "Reason" %><br>
+        <%= f.text_field :comment, :class => "form-control" %>
       </div>
     </div>
   </div>
