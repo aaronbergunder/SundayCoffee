@@ -1,12 +1,12 @@
 <div class="col-sm-12">
-  <h1 >Coffee Sunday?</h1>
-  <h3 class="montserrat underdate"><% @sunday = Date.new %>
+  <h1 class="turquoise">Coffee Sunday?</h1>
+  <h5 class="emerald"><% @sunday = Date.new %>
   <% @sunday = Time.now.end_of_week %>
-  <%= @sunday.strftime("%B %d, %Y") %></h3>
+  <%= @sunday.strftime("%B %d, %Y") %></h5>
 </div>
 
 <div class="col-sm-12">
-  <h3 class="montserrat sage">Gonna be there</h3>
+  <h6 class="">Gonna be there</h6>
 </div>
 
 <% @people.each do |person| %>
@@ -21,9 +21,7 @@
       
       <div class="col-sm-8">
         <%= link_to (image_tag '/images/pencil.png', :class => "edit"), edit_person_path(person) %>
-        <%= image_tag '/images/speech_bubble.png', :class => "edit" %>
         <div class="tooltip fade bottom in">
-          <div class="tooltip-arrow"></div>
           <div class="tooltip-inner"><%= person.comment %></div>
         </div>
       </div>
@@ -34,7 +32,7 @@
 
 
 <div class="col-sm-12">
-  <h3 class="montserrat chinatown">Not gonna make it</h3>
+  <h6 class="">Not gonna make it</h6>
 </div>
 
 <% @people.each do |person| %>
@@ -49,9 +47,7 @@
       
       <div class="col-sm-3 small">
         <%= link_to (image_tag '/images/pencil.png', :class => "edit"), edit_person_path(person) %>
-        <%= image_tag '/images/speech_bubble.png', :class => "edit" %>
         <div class="tooltip fade bottom in">
-          <div class="tooltip-arrow"></div>
           <div class="tooltip-inner"><%= person.comment %></div>
         </div>
       </div>

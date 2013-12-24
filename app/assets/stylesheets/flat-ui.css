@@ -200,18 +200,18 @@ body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.72222;
-  color: #666;
-  background-color: #222222;
+  color: #34495e;
+  background-color: #ffffff;
 }
 a {
-  color: #fff;
+  color: #16a085;
   text-decoration: none;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
 a:hover,
 a:focus {
-  color: #ccc;
+  color: #1abc9c;
   text-decoration: none;
 }
 .img-rounded {
@@ -309,7 +309,7 @@ h6 small,
 .h4 small,
 .h5 small,
 .h6 small {
-  color: #444;
+  color: #e7e9ec;
 }
 h1,
 h2,
@@ -2795,7 +2795,6 @@ fieldset[disabled] .form-control + .input-icon,
   border-radius: 6px;
   padding: 14px;
   position: relative;
-  text-align: center;
 }
 .tile.tile-hot:before {
   background: url(../images/tile/ribbon.png) 0 0 no-repeat;

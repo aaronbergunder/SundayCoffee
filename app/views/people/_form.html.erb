@@ -23,7 +23,7 @@
           <%= image_tag @person.avatar_url(:thumb), :class => "thumbs" %>
         <% end %>
         <br>
-        <%= f.file_field :avatar %>
+        <%= f.file_field :avatar, accept: 'image/png,image/gif,image/jpeg' %>
       </div>
     </div>
     <div class="col-sm-4">
