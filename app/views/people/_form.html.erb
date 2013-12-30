@@ -11,43 +11,36 @@
     </div>
   <% end %>
   <div class="row">
-    <div class="col-sm-3">
+    <div class="four columns">
       <% if @person.name %>
         <h4>Hey, <%= @person.name + '!' %></h4>
       <% else %>
-        <div class="tile">
-        Name<br>
+        <%= f.label 'Name' %>
           <%= f.text_field :name, :class => "form-control" %><br>
-          You going to be at coffee this week?
-        </div>
       <% end %>
+      
+      
     </div>
   
-    <div class="col-sm-3">
-      <div class="tile">
-        <%= f.label "Avatar" %><br>
-        <% if @person.avatar %>
+    <div class="four columns">
+      
+        <%= f.label "Avatar" %>
+        <% if @person.avatar != '' %>
           <%= image_tag @person.avatar_url(:thumb), :class => "thumbs" %>
         <% end %>
-        <br>
         <%= f.file_field :avatar, accept: 'image/png,image/gif,image/jpeg' %>
-      </div>
     </div>
-    <div class="col-sm-3">
-      <div class="tile">
+    <div class="four columns">
         <%= f.label "Attending" %><br>
-        <%= f.radio_button :attending , "1" %> Wouldn't miss it!<br>
-        <%= f.radio_button :attending , "0" %> Sadly, no.
-      </div>
+        <%= f.radio_button :attending , "1", :class => "radio", :data => {:toggle=>"radio"} %> Yes<br>
+        <%= f.radio_button :attending , "0", :class => "radio", :data => {:toggle=>"radio"} %> No
     </div>
-    <div class="col-sm-3">
-      <div class="tile">
+    <div class="four columns">
         <%= f.label "Reason" %><br>
         <%= f.text_field :comment, :class => "form-control" %>
-      </div>
     </div>
   </div>
-  <div class="actions">
-    <%= f.submit "Submit", :class => "btn btn-primary" %>
+  <div class="actions right">
+    <%= f.submit "Submit" %>
   </div>
 <% end %>

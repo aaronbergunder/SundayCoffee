@@ -1,6 +1,11 @@
-<h1 class="playfair">Check yoself</h1>
+<h3 class="helvetica flat-turquoise">Edit status</h3>
+<hr />
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @person %> |
+<hr />
+<div class="clearfix right">
+
 <%= link_to 'Back', people_path %>
+<%= button_to 'Delete Me', @person, :confirm => "Are you sure?", :method => :delete, :class => :destroy %>
+</div>

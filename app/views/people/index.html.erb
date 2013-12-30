@@ -1,7 +1,4 @@
-<% if notice %>
-<div id="alert" class="alert alert-info">
-  <%= notice %></div>
-<% end %>
+
 
 <div class="col-sm-12">
   <h1 class="helvetica">Coffee Sunday?</h1>
@@ -12,7 +9,7 @@
 </div>
 
 <div class="col-sm-12">
-  <h6 class="flat-green">Gonna be there</h6>
+  <h3 class="flat-green">Will be there</h3>
 </div>
 
 <% @people.each do |person| %>
@@ -23,7 +20,7 @@
 
 
 <div class="col-sm-12">
-  <h6 class="flat-red">Not gonna be there</h6>
+  <h3 class="flat-red">Won't be there</h3>
 </div>
 
 <% @people.each do |person| %>
@@ -33,5 +30,5 @@
 <% end %>
 
 <br>
-<div class="add-person helvetica"><%= link_to (image_tag '/images/add.png', :alt=>"Add a new friend!", :class => 'add'), new_person_path %>Add a guest</div>
+<div class="add-person helvetica"><h4 class="flat-turquoise"><%= link_to 'Add a guest', new_person_path %></h4></div>
 
