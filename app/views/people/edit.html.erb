@@ -1,11 +1,10 @@
-<h3 class="helvetica flat-turquoise">Edit status</h3>
+<h3 class="helvetica flat-turquoise">Edit status</h3><%= link_to 'Back', people_path %>
 <hr />
 
 <%= render 'form' %>
 
 <hr />
-<div class="clearfix right">
+<div class="clearfix">
 
-<%= link_to 'Back', people_path %>
 <%= button_to 'Delete Me', @person, :confirm => "Are you sure?", :method => :delete, :class => :destroy %>
 </div>
