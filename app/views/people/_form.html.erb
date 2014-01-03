@@ -24,19 +24,17 @@
   
     <div class="four columns">
       
-        <%= f.label "Avatar" %>
-        <% if @person.avatar != '' %>
-          <%= image_tag @person.avatar_url(:thumb), :class => "thumbs" %>
-        <% end %>
-        <%= f.file_field :avatar, accept: 'image/png,image/gif,image/jpeg' %>
+        <%= f.label "Email" %>
+        <%= f.text_field :email %>
+        
     </div>
     <div class="four columns">
-        <%= f.label "Attending" %><br>
+        <%= f.label "Attending" %>
         <%= f.radio_button :attending , "1", :class => "radio", :data => {:toggle=>"radio"} %> Yes<br>
         <%= f.radio_button :attending , "0", :class => "radio", :data => {:toggle=>"radio"} %> No
     </div>
     <div class="four columns">
-        <%= f.label "Comment" %><br>
+        <%= f.label "Comment" %>
         <%= f.text_field :comment, :class => "form-control" %>
     </div>
   </div>

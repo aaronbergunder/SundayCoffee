@@ -34,7 +34,7 @@
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block; }
 	body {
-		line-height: 1;
+		line-height: 1em;
 		padding-top: 2em; }
 	ol, ul {
 		list-style: none; }
@@ -55,7 +55,7 @@
 		background: #fff;
 		font: 14px/21px "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-weight: 400;
-		color: #444;
+		color: #333;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
  }
@@ -95,8 +95,8 @@
 
 /* #Links
 ================================================== */
-	a, a:visited { color: #666; text-decoration: none; outline: 0; }
-	a:hover, a:focus { color: #aaa; }
+	a, a:visited { color: #888; text-decoration: none; font-style: italic; outline: 0; }
+	a:hover, a:focus { color: #bbb; }
 	p a, p a:visited { line-height: inherit; }
 
 
