@@ -20,6 +20,6 @@
 # Learn more: http://github.com/javan/whenever
 
 
-every :minute do
-	rake "fresh_coffee:weekly"
+every :saturday, :at => "3pm"  do
+	rake "db:freshcoffee"
 end
