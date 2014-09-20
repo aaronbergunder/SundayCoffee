@@ -20,6 +20,6 @@
 # Learn more: http://github.com/javan/whenever
 
 
-every 7.days do
-	
+every :minute do
+	rake "fresh_coffee:weekly"
 end
