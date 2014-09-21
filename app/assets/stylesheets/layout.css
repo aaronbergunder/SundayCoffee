@@ -20,6 +20,15 @@
 /* #Page Styles
 ================================================== */
 
+
+.center {
+	text-align: center;
+}
+
+.prata {
+	font-family: 'Prata', 'Georgia', serif;
+}
+
 /* #Media Queries
 ================================================== */
 

@@ -1,7 +1,7 @@
 
 
 <div class="col-sm-12">
-  <h1 class="helvetica">Coffee Sunday?</h1>
+  <h1 class="prata">Coffee Sunday?</h1>
   <h6 class="underdate"><% @sunday = Date.new %>
   <% @sunday = Time.now.end_of_week %>
   <%= @sunday.strftime("%B %d, %Y") %></h6>
@@ -10,26 +10,27 @@
 </div>
 
 <div class="col-sm-12">
-  <h5 class="flat-green title">Will be there</h5>
+  <h5 class="flat-yellow title">Will be there</h5>
 </div>
-
+<div class="row">
 <% @people.each do |person| %>
   <% if person.attending? %> 
     <%= render 'list' , :person => person %>
   <% end %>
 <% end %>
-
-
-<div class="col-sm-12">
-  <h5 class="flat-red title">Won't be there</h5>
 </div>
 
+<div class="col-sm-12">
+  <h5 class="flat-purple title">Won't be there</h5>
+</div>
+<div class="row">
 <% @people.each do |person| %>
   <% if !person.attending? %> 
     <%= render 'list' , :person => person %>
   <% end %>
 <% end %>
-
+</div>
 <br>
 <div class="add-person"><%= link_to '+ Add a guest', new_person_path %></div>
+
 
