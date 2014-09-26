@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:trans1t/SundayCoffee.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/home/deploy/sunday_coffee/'
+set :deploy_to, '/home/deploy/sunday_coffee'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -33,6 +33,8 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+#
+set :unicorn_pid, '/tmp/unicorn.sunday.pid'
 
 namespace :deploy do
 
