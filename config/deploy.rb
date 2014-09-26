@@ -36,6 +36,8 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 #
 set :unicorn_pid, '/tmp/unicorn.sunday.pid'
 
+set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
+
 namespace :deploy do
 
   desc 'Restart application'
