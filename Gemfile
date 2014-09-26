@@ -7,6 +7,11 @@ gem 'rails', '4.0.2'
 group :development do
   gem 'sqlite3'
   gem 'thin'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-rvm'
+  gem 'capistrano3-unicorn'
 end
 
 # Use SCSS for stylesheets
@@ -47,18 +52,6 @@ end
 
 group :production do
 	gem 'rails_12factor'
-  gem 'pg'
+  gem 'mysql2'
   gem 'unicorn'
 end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
