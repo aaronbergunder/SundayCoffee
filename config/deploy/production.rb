@@ -8,6 +8,7 @@ role :app, %w{deploy@papertron.com}
 role :web, %w{deploy@papertron.com}
 role :db,  %w{deploy@papertron.com}
 
+set :rails_env, 'production'
 
 # Extended Server Syntax
 # ======================
