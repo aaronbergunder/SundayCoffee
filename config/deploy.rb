@@ -2,7 +2,7 @@
 lock '3.2.1'
 
 set :application, 'sunday_coffee'
-set :repo_url, 'git@github.com:trans1t/SundayCoffee.git'
+set :repo_url, 'git@github.com:aaronbergunder/SundayCoffee.git' 
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
